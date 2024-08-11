@@ -18,7 +18,13 @@ const Home: React.FC = () => {
 
   return (
     <div className="home">
-      <HeroBannar/>
+      <HeroBannar 
+        list1='Totam optio veniam accusamus rem, quas.'
+        list2 = 'Lorem ipsum dolor, sit amet adipisicing elit.'
+        list3 = 'Recusandae ullam officia facere consectetur.'
+        list4 = 'voluptatibus sit repellendus quis quasi placeat omnis .'
+        bullets='fa-solid fa-paw'
+      />
       <div className="shelf-wrapper">
         <div className="header">
           <h3>Pets Shelf</h3>
@@ -33,4 +39,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home
+export default Home;

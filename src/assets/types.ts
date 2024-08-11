@@ -5,12 +5,14 @@ export type DataShape = {
   id: number;
 }
 
+
 // Type for MenuData
 export interface Item {
   title: string;
   link: string;
   icon: string;
 }
+
 
 // Types for PetsData
 export interface PetsProperties {
@@ -19,6 +21,7 @@ export interface PetsProperties {
   icon: string;
   id: number;
 }
+
 
 // Type for Pet & Cart comp.
 export type Props = {
@@ -46,4 +49,14 @@ export interface CartContextType {
   removeFromCart: (id: number) => void;
   updateItem: (id: number, quantity: number) => void;
   getCartTotal: () => number;
+}
+
+
+// Types for HeroSection
+export type DescriptionList = {
+  list1: string;
+  list2: string;
+  list3: string;
+  list4: string;
+  bullets: string
 }

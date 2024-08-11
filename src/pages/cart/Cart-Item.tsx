@@ -3,8 +3,6 @@ import { CartItemProps } from "../../assets/types";
 import { PetsData } from "../../data/PetsData";
 import { CartContext } from "../../context/Shopping-Context";
 
-
-
 export const CartItem: React.FC<CartItemProps> = ({ data, cartItem }) => {
 
   const localPet = PetsData.find(pet => pet.id === data.id);
