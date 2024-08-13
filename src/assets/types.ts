@@ -43,7 +43,7 @@ export interface CartItem {
   quantity: number;
 }
 
-export interface CartContextType {
+export interface CartContextType{
   cart: CartItem[];
   addToCart: (id: number) => void;
   removeFromCart: (id: number) => void;
@@ -59,4 +59,28 @@ export type DescriptionList = {
   list3: string;
   list4: string;
   bullets: string
+}
+
+
+// Types for Slider comp.
+import { SwiperProps } from "swiper/react";
+
+export interface ReviewDataTypes{
+  image: string;
+  personName: string;
+  testimony: string
+}
+
+export interface ReviewProps{
+  reviews: ReviewDataTypes[];
+}
+
+export interface SlideSectionProps extends ReviewProps {
+  spaceBetween?: SwiperProps['spaceBetween'];
+  slidesPerView?: SwiperProps['slidesPerView'];
+  loop?: SwiperProps['loop'];
+  autoplay?: SwiperProps['autoplay'];
+  navigation?: SwiperProps['navigation'];
+  pagination?: SwiperProps['pagination'];
+  breakpoints?: SwiperProps['breakpoints'];
 }

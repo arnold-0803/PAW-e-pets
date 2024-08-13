@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { DataShape } from '../assets/types';
+import { DataShape } from './types';
 
 const useFetch = (url: string) => {
   const [data, setData] = useState<DataShape[]>([]);
@@ -24,7 +24,6 @@ const useFetch = (url: string) => {
         })
         .then((data: { hits: DataShape[] }) => {
           setData(data.hits)
-          console.log(data);
           setLoading(false);
           localStorage.setItem('apiData', JSON.stringify(data.hits));
         })

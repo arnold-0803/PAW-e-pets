@@ -45,11 +45,6 @@
 }
 
 .search-box form input{
-  outline: none;
-  border: none;
-}
-
-.search-box form input:nth-child(1){
   width: 75%;
   height: 100%;
   padding-left: 5px;
@@ -58,25 +53,29 @@
   font-size: 1.3rem;
   background: #33333396;
   color: #fff;
+  outline: none;
+  border: none;
 }
 
-.search-box form input:nth-child(1):focus{
+.search-box form input:focus{
   border: 2px solid #4de04d;
 }
 
-.search-box form input:nth-child(1)::placeholder{
+.search-box form input::placeholder{
   color: #ffffffd2;
 }
 
-.search-box form input:nth-child(2){
+.search-box form button{
   width: 25%;
   height: 100%;
   background: #4de04d;
   color: #fff;
   font-size: 1.3rem;
+  outline: none;
+  border: none;
 }
 
-.search-box form input:nth-child(2):hover{
+.search-box form button:hover{
   width: 25%;
   height: 100%;
   background: #4de04db7;
@@ -153,8 +152,7 @@ ul li a{
     width: 350px;
   }
 
-  .search-box form input:nth-child(2){
-    width: 30%;
+  .search-box form input{
     font-size: 1.2rem;
   }
 

@@ -3,74 +3,74 @@ import { PetsProperties } from "../assets/types";
 export const PetsData: PetsProperties[] = [
   {
     specs: "lorem ipsum doler sit",
-    price: 15,
+    price: 150,
     icon: "fa-solid fa-paw",
     id: 1532627
   },
   {
     specs: "lorem ipsum doler sit",
-    price: 10,
+    price: 300,
     icon: "fa-solid fa-paw",
     id: 3715733
   },
   {
     specs: "lorem ipsum doler sit",
-    price: 20,
+    price: 280,
     icon: "fa-solid fa-paw",
     id: 5883275
   },
   {
     specs: "lorem ipsum doler sit",
-    price: 8,
+    price: 90,
     icon: "fa-solid fa-paw",
     id: 1651945
   },
   {
     specs: "lorem ipsum doler sit",
-    price: 50,
+    price: 400,
     icon: "fa-solid fa-paw",
     id: 7174266
   },
   {
     specs: "lorem ipsum doler sit",
-    price: 25,
+    price: 100,
     icon: "fa-solid fa-paw",
     id: 807315
   },
   {
     specs: "lorem ipsum doler sit",
-    price: 5,
+    price: 340,
     icon: "fa-solid fa-paw",
     id: 2606759
   },
   {
     specs: "lorem ipsum doler sit",
-    price: 30,
+    price: 75,
     icon: "fa-solid fa-paw",
     id: 5491105
   },
   {
     specs: "lorem ipsum doler sit",
-    price: 7,
+    price: 190,
     icon: "fa-solid fa-paw",
     id: 624952
   },
   {
     specs: "lorem ipsum doler sit",
-    price: 11,
+    price: 110,
     icon: "fa-solid fa-paw",
     id: 1517090
   },
   {
     specs: "lorem ipsum doler sit",
-    price: 40,
+    price: 205,
     icon: "fa-solid fa-paw",
     id: 1517642
   },
   {
     specs: "lorem ipsum doler sit",
-    price: 30,
+    price: 500,
     icon: "fa-solid fa-paw",
-    id: 2822939
+    id: 2024311
   }
 ]

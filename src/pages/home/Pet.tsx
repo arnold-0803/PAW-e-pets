@@ -24,7 +24,6 @@ const Pet: React.FC<Props> = ({data}) => {
   const cartItem = cart.find(item => item.id === id);
   const cartItemAmount = cartItem ? cartItem.quantity : 0;
 
-
   return (
     <div className="card">
       <div className="image">
@@ -40,7 +39,7 @@ const Pet: React.FC<Props> = ({data}) => {
           </div>
           <b>${localPet.price}</b>
           <button onClick={handleAddToCart}>
-            Add Order<i className='fa-solid fa-cart-shopping'></i>
+            Add to cart<i className='fa-solid fa-cart-shopping'></i>
             {cartItemAmount > 0 && <span>({cartItemAmount})</span>}
           </button>
         </div>

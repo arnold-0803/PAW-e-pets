@@ -1,0 +1,81 @@
+.searched-wrapper{
+  width: 100%;
+  background: #dcdcdca9;
+}
+
+.searched-wrapper .heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searched-wrapper .heading h3{
+  position: relative;
+  font-size: 2.2rem;
+  color: #071952;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.searched-wrapper .heading h3:after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 10px;
+  border-top: 5px solid #ff6347;
+  left: 0;
+  bottom: 15px;
+  border-radius: 50%;
+  margin-bottom: 8.5px;
+}
+
+.searched-wrapper .searched-photos{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 40px;
+}
+
+.searched-photos .searched{
+  position: relative;
+  border: 2px solid #ff6347;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.4s ease-in-out;
+}
+
+.searched-photos .searched:hover{
+  background: #ff6347;
+  color: #fff;
+}
+
+.searched .image{
+  width: 100%;
+  height: 300px
+}
+
+.searched .image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.searched h4{
+  padding: 20px 0;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #ff6347;
+}
+
+.searched-photos .searched:hover h4{
+  color: #fff;
+}
+
+
+.searched-wrapper h1{
+  font-size: 5rem;
+  color: #dcdcdce0;
+  text-align: center;
+}
