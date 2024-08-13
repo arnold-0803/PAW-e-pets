@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import useFetch from '../../assets/useFetch';
 import { CartContext } from '../../context/Shopping-Context';
 import { CartItem } from './Cart-Item';
 import "./Cart.css";
+import useFetch from '../../assets/useFetch';
 
 export const Cart: React.FC = () => {
 
