@@ -84,3 +84,12 @@ export interface SlideSectionProps extends ReviewProps {
   pagination?: SwiperProps['pagination'];
   breakpoints?: SwiperProps['breakpoints'];
 }
+
+
+// Types for Elementor Data
+export type ElementorTypes = {
+  figure: number | string;
+  description: string;
+  icon: string;
+  symbol: string;
+}

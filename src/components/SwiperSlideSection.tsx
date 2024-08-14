@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 
-const SlideSection: React.FC<SlideSectionProps> = ({
+const SwiperSlides: React.FC<SlideSectionProps> = ({
   reviews,
   spaceBetween = 50,
   slidesPerView= 1,
@@ -19,7 +19,7 @@ const SlideSection: React.FC<SlideSectionProps> = ({
     <div>
       <h3>{}</h3>
       <Swiper
-      className='swiper-wrapper'
+      className='swiper'
       spaceBetween={spaceBetween}
       slidesPerView={slidesPerView}
       loop={loop}
@@ -33,11 +33,9 @@ const SlideSection: React.FC<SlideSectionProps> = ({
             className='slide'
             key={index}
           >
-            <div className="image">
+            <div className="person-image">
               <img src={item.image} alt="" />
-              <div className="person-name">
-                <b>{item.personName}</b>
-              </div>
+              <p><b>{item.personName}</b></p>
             </div>
             <div className="content">
               <p>{item.testimony}</p>
@@ -49,4 +47,4 @@ const SlideSection: React.FC<SlideSectionProps> = ({
   );
 }
 
-export default SlideSection;
+export default SwiperSlides;
