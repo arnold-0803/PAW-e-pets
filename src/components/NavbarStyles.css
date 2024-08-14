@@ -176,9 +176,18 @@ ul li a{
   .search-box{
     position: absolute;
     top: 100%;
-    width: 98%;
-    left: 50%;
-    transform: translate(-50%);
+    left: 0;
+    width: 100%;
+    padding: 0 2px;
+    visibility: hidden;
+    transform: translateX(0);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  }
+
+  .search-box.active{
+    visibility: visible;
+    opacity: 1;
   }
 
   .navbar .menu-bar{
@@ -203,9 +212,9 @@ ul li a{
 
   .menu{
     position: absolute;
-    top: 100%;
+    top: 175%;
     left: 0;
-    height: 90vh;
+    height: 87vh;
     width: 100%;
     flex-direction: column;
     justify-content: flex-start;

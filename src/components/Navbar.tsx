@@ -12,7 +12,7 @@ const Navbar: React.FC = ()  => {
       <NavLink to='/'>
         <h2>P<i className='fa-solid fa-paw'></i>W</h2>
       </NavLink>
-      <SearchBar/>
+      <SearchBar open={open}/>
       <ul 
         className={open ? "menu active" : "menu"}
       >

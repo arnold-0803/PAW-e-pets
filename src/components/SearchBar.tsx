@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const SearchBar: React.FC = () => {
+type Open = {
+  open: boolean;
+}
+
+const SearchBar: React.FC<Open> = ({open}) => {
   const navigate = useNavigate();
   const [filter, setFilter] = useState<string>("");
 
@@ -17,7 +21,7 @@ const SearchBar: React.FC = () => {
   };
 
   return (
-    <div className="search-box">
+    <div className={open  ? "search-box active" : "search-box"}>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder='search for pet' onChange={handleSearch} required/>
         <button type="submit">Search</button>

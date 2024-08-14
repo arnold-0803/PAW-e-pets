@@ -77,7 +77,8 @@
 
 
 .searched-wrapper h1{
-  font-size: 5rem;
-  color: #dcdcdce0;
+  font-size: 1.3rem;
+  color: #00000041;
   text-align: center;
+  padding-bottom: 20px;
 }
