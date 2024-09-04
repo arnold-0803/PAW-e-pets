@@ -71,6 +71,6 @@ export const PetsData: PetsProperties[] = [
     specs: "lorem ipsum doler sit",
     price: 500,
     icon: "fa-solid fa-paw",
-    id: 2024311
+    id: 2822939
   }
 ]

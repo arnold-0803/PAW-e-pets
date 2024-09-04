@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Pet from './Pet';
 import HeroBannar from '../../components/HeroSection';
 import "./Home.css";
@@ -6,9 +6,20 @@ import useFetch from '../../assets/useFetch';
 import { Reviews } from '../../data/ReviewData';
 import Elementor from '../../components/Elementor';
 import SwiperSlides from '../../components/SwiperSlideSection';
+import PaginationForPages from '../../components/PaginationForPages';
 
 const Home: React.FC = () => {
   const {data, error, loading} = useFetch("https://pixabay.com/api/?key=43296904-a69d2147a6885fcb843b07884&q=cats+dogs&per_page=12");
+
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  
+  const itemsPerPage: number = 8;
+  // calculate the indices for slicing the data
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = Array.isArray(data) ? data.slice(indexOfFirstItem, indexOfLastItem) : [];
+  // culculate total pages
+  const totalPages = Math.ceil(data.length / itemsPerPage);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -41,12 +52,19 @@ const Home: React.FC = () => {
           <h3>Pets Shelf</h3>
         </div>
         <div className="card-wrapper">
-          {data.map((item, index)=>
-            <Pet key={index} data={item}/>
-          )}
+          <div className="card-items">
+            {currentItems.map((item, index)=>
+              <Pet key={index} data={item}/>
+            )}
+          </div>
+            <PaginationForPages
+              totalPages={totalPages}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+            />
         </div>
       </div>
-      <div className="elementor-wrapper">
+      <div className="elementor-element">
           <Elementor/>
       </div>
       <div className="home-swiper-wrapper">

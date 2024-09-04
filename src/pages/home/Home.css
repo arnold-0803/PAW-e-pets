@@ -35,6 +35,10 @@
 }
 
 .shelf-wrapper .card-wrapper{
+  width: 100%;
+}
+
+.shelf-wrapper .card-wrapper .card-items{
   display: grid;
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -44,7 +48,7 @@
   padding: 0 5%;
 }
 
-.card-wrapper .card{
+.card-items .card{
   position: relative;
   width: 100%;
   min-height: 300px;
@@ -54,30 +58,30 @@
   border: 3px solid #071952;
 }
 
-.card-wrapper .card:hover{
+.card-items .card:hover{
   border: 3px solid #ff6347;
 }
 
-.card-wrapper .card .image{
+.card-items .card .image{
   width: 100%;
   height: 240px;
   border-bottom: 3px solid #071952;
   overflow: hidden;
 }
 
-.card-wrapper .card .image img{
+.card-items .card .image img{
   width: 100%;
   height: 100%;
   border-radius: 30px 30px 0 0;
   transition: transform 0.4s;
 }
 
-.card-wrapper .card:hover .image img{
+.card-items .card:hover .image img{
   transform: scale(1.1);
   border-radius: 30px 30px 0 0;
 }
 
-.card-wrapper .card h4{
+.card-items .card h4{
   font-size: 1.2rem;
   font-weight: 600;
   color: #ff6347;
@@ -151,60 +155,8 @@
   background: #ff6347;
 }
 
-.card-wrapper .card:hover .overlayer-content{
+.card-items .card:hover .overlayer-content{
   height: 240px;
-}
-
-.home .elementor-wrapper{
-  width: 100%;
-  background: #071952;
-  padding: 0 40px 40px;
-}
-
-.elementor-wrapper .heading h3{
-  color: #fff;
-}
-
-.elementor-wrapper .elementor-content{
-  width: 100%;
-  background: #07195296;
-  padding: 8px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  column-gap: 1rem;
-}
-
-.elementor-content .content{
-  padding: 20px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.elementor-content .content h2{
-  color: #fff;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-}
-
-.elementor-content .content h2 i{
-  width: 50px;
-  height: 50px;
-  color: #fff;
-  font-size: 2rem;
-  margin-right: 5px;
-  border-radius: 50%;
-  background: #4de04d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.elementor-content .content p{
-  color: #4de04d;
-  padding: 10px 0;
 }
 
 .home .home-swiper-wrapper{

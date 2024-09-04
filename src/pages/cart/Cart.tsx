@@ -27,7 +27,7 @@ export const Cart: React.FC = () => {
       <div className="cart-content">
         <h3>Your Cart Items</h3>
       </div>
-      <div className="cart-items">
+      <div className="cart-item-wrapper">
         {data.map(item => {
           const cartItem = cart.find(cartItem => cartItem.id === item.id);
           if (cartItem && cartItem.quantity !== 0) {
@@ -40,18 +40,17 @@ export const Cart: React.FC = () => {
           }
           return null;
         })}
-        <div className='checkout-wrapper'>
-          {totalAmount > 0 ? (
-            <div className="checkout">
-              <p>Subtotal: <b>${getCartTotal()}</b></p>
-              <button onClick={() => navigate("/")}>Continue Shopping</button>
-              <button>Checkout</button>
-            </div>
-          ) : (
-            <h1>Your Cart is Empty</h1>
-          )}
-        </div>
-        
+      </div>
+      <div className='checkout-wrapper'>
+        {totalAmount > 0 ? (
+          <div className="checkout">
+            <p>Subtotal: <b>${getCartTotal()}</b></p>
+            <button onClick={() => navigate("/")}>Continue Shopping</button>
+            <button>Checkout</button>
+          </div>
+        ) : (
+          <h1>Your Cart is Empty</h1>
+        )}
       </div>
     </div>
   );

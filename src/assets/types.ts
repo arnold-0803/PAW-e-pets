@@ -88,8 +88,16 @@ export interface SlideSectionProps extends ReviewProps {
 
 // Types for Elementor Data
 export type ElementorTypes = {
-  figure: number | string;
+  start: number;
+  end: number;
   description: string;
   icon: string;
   symbol: string;
+}
+
+// Type for Pagination for pages
+export interface PaginationProps{
+  totalPages: number;
+  currentPage: number;
+  setCurrentPage: (page: number) => void;
 }
